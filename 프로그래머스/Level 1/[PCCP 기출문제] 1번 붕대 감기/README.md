@@ -5,52 +5,57 @@
 성공 코드
 
 ```
-def solution(names, yearning, photos):
-    value_dic = {}
-    answer = []
-    for i, name in enumerate(names):
-        value_dic[name] = yearning[i]
-    for photo in photos:
-        each_photo_value = 0
-        for person in photo:
-            each_photo_value += value_dic.get(person, 0)
-            ##값없으면 0 리턴
-        answer.append(each_photo_value)
-    return answer
+def solution(bandage, health, attacks):
+    cur_health = health
+    last_attack = int(attacks[len(attacks)-1][0])
+    cur_bandage = 0
+    for i in range(last_attack+1):
+        if attacks:
+            if i == attacks[0][0]:
+                cur_health -= attacks[0][1]
+                if cur_health <= 0:
+                    cur_health = -1
+                    break
+                attacks.pop(0)
+                cur_bandage = 0
+                continue
+        cur_health += bandage[1]
+        cur_bandage += 1
+        if cur_bandage == bandage[0]:
+            cur_health += bandage[2]
+            cur_bandage = 0
+        if cur_health > health:
+            cur_health = health
+    return cur_health
 ```
 
 사용 개념
 
-- dictionary 자료형
-- dictionary 자료형 선언 enmerate
-- for
-- 배열 선언
-- 배열 추가
-- dic에서 값 없으면 처리 (get)
+- 배열 pop 사용
+- 예외처리 사용
+
 
 ---
 
 다른 사람 코드 중 인상 깊었던 것
 
 ```
-def solution(name, yearning, photo):
-    dictionary = dict(zip(name,yearning))
-    scores = []
-    for pt in photo:
-        score = 0
-        for p in pt:
-            if p in dictionary:
-                score += dictionary[p]
-        scores.append(score)
-    return scores
+def solution(bandage, health, attacks):
+    hp = health
+    start = 1
+    for i, j in attacks:
+        hp += ((i - start) // bandage[0]) * bandage[2] + (i - start) * bandage[1]
+        start = i + 1
+        if hp >= health:
+            hp = health
+        hp -= j
+        if hp <= 0:
+            return -1
+    return hp
 ```
 
 사용 개념
 
-- 이사람은 zip을 사용했음
-
-그 외 다른 사람들은 그냥 index로만 사용해서 푼 사람들도 있는데
-시간 복잡도 생각하여 dictionary로 풀음
-
-index => O(n^2)
-dic => O(n)
+- attacks의 배열 요소를 각각 i, j 로 받아서 사용함
+- 즉 배열 각각의 요소에 index로 접근할 필요 없이 이렇게 사용할 수 있음
+- 이 방식으로 사용하면 range를 사용하지 않을 수 있음
