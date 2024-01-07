@@ -1,76 +1,28 @@
-def solution(park, routes):
-    answer = []
-    len_w = len(park[0])-1
-    len_h = len(park)-1
-    loc_x = 0
-    loc_y = 0
-    for i in range(len(park)):
-        check = park[i].find("S")
-        if check != -1:
-            loc_x = i
-            loc_y = check
-    for i in routes:
-        flag = False
-        order = i.split()
-        if order[0] == "E":
-            if (loc_y + int(order[1])) > len_w:
-                flag = True
-                continue
-
-            for check in range(int(order[1])):
-                if park[loc_x][loc_y + check + 1] == "X":
-                    flag = True
+def solution(bandage, health, attacks):
+    cur_health = health
+    last_attack = int(attacks[len(attacks)-1][0])
+    cur_bandage = 0
+    for i in range(last_attack+1):
+        if attacks:
+            if i == attacks[0][0]:
+                cur_health -= attacks[0][1]
+                if cur_health <= 0:
+                    cur_health = -1
                     break
-
-            if flag == False:
-                loc_y = loc_y + int(order[1])
-
-        if order[0] == "W":
-
-            if (loc_y - int(order[1])) < 0:
-                flag = True
+                attacks.pop(0)
+                cur_bandage = 0
                 continue
-
-            for check in range(int(order[1])):
-                if park[loc_x][loc_y - (check + 1)] == "X":
-                    flag = True
-                    break
-
-            if flag == False:
-                loc_y = loc_y - int(order[1])
-
-        if order[0] == "S":
-
-            if (loc_x + int(order[1])) > len_h:
-                flag = True
-                continue
-
-            for check in range(int(order[1])):
-                if park[loc_x + check + 1][loc_y] == "X":
-                    flag = True
-                    break
-
-            if flag == False:
-                loc_x = loc_x + int(order[1])
-
-        if order[0] == "N":
-
-            if (loc_x - int(order[1])) < 0:
-                flag = True
-                continue
-
-            for check in range(int(order[1])):
-                if park[loc_x - (check + 1)][loc_y] == "X":
-                    flag = True
-                    break
-
-            if flag == False:
-                loc_x = loc_x - int(order[1])
-    answer.append(loc_x)
-    answer.append(loc_y)
-    return answer
+        cur_health += bandage[1]
+        cur_bandage += 1
+        if cur_bandage == bandage[0]:
+            cur_health += bandage[2]
+            cur_bandage = 0
+        if cur_health > health:
+            cur_health = health
+    return cur_health
 
 
-solution(["SOO", "OOO", "OOO"],	["E 2", "S 2", "W 1"])
-solution(["SOO", "OXX", "OOO"],	["E 2", "S 2", "W 1"])
-solution(["OSO", "OOO", "OXO", "OOO"], ["E 2", "S 3", "W 1"])
+# solution([5, 1, 5],	30,	[[2, 10], [9, 15], [10, 5], [11, 5]])
+# solution([3, 2, 7], 20,	[[1, 15], [5, 16], [8, 6]])
+solution([4, 2, 7], 20,	[[1, 15], [5, 16], [8, 6]])
+solution([1, 1, 1], 5,	[[1, 2], [3, 2]])
