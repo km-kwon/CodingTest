@@ -30,3 +30,13 @@ dictionary를 선언할때 서로 다른 배열을 페어로 선언 => zip사용
 for 문 사용시 range 사용 지양
 index로 접근 하지 않고 i, j 한번에 사용 가능
 ```
+
+---
+### Level 2
+- [혼자서 하는 틱택토](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%ED%98%BC%EC%9E%90%EC%84%9C%20%ED%95%98%EB%8A%94%20%ED%8B%B1%ED%83%9D%ED%86%A0)
+
+```
+성공에 대해 너무 어렵게 생각함
+DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
+결국 1시간이 넘어 답을 봤지만 생각했던 풀이가 맞았음
+```
