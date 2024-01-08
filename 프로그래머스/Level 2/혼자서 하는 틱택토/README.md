@@ -5,56 +5,110 @@
 성공 코드
 
 ```
-def solution(bandage, health, attacks):
-    cur_health = health
-    last_attack = int(attacks[len(attacks)-1][0])
-    cur_bandage = 0
-    for i in range(last_attack+1):
-        if attacks:
-            if i == attacks[0][0]:
-                cur_health -= attacks[0][1]
-                if cur_health <= 0:
-                    cur_health = -1
-                    break
-                attacks.pop(0)
-                cur_bandage = 0
-                continue
-        cur_health += bandage[1]
-        cur_bandage += 1
-        if cur_bandage == bandage[0]:
-            cur_health += bandage[2]
-            cur_bandage = 0
-        if cur_health > health:
-            cur_health = health
-    return cur_health
+def count(board):
+    num_O, num_X = 0, 0
+    for line in board:
+        if "O" in line:
+            num_O += line.count("O")
+        if "X" in line:
+            num_X += line.count("X")
+
+    return num_O, num_X
+
+def won(board, shape):
+    for i in range(3):
+        if board[i][0] == shape and board[i][1] == shape and board[i][2] == shape:
+            return True
+    for i in range(3):
+        if board[0][i] == shape and board[1][i] == shape and board[2][i] == shape:
+            return True
+    if board[0][0] == shape and board[1][1] == shape and board[2][2] == shape:
+        return True
+    if board[2][0] == shape and board[1][1] == shape and board[0][2] == shape:
+        return True
+    return False
+
+def solution(board):
+    answer = -1
+    num_O, num_X = count(board)
+    if not (num_O == num_X or num_O == num_X+1):
+        return 0
+    if won(board, 'O') and won(board, 'X'):
+        return 0
+    if won(board, 'O') and num_O != num_X+1:
+        return 0
+    if won(board, 'X') and num_O != num_X:
+        return 0
+    return 1
 ```
 
 사용 개념
 
-- 배열 pop 사용
-- 예외처리 사용
+- 배열 count
+- 외부 함수의 사용
 
 ---
 
 다른 사람 코드 중 인상 깊었던 것
 
 ```
-def solution(bandage, health, attacks):
-    hp = health
-    start = 1
-    for i, j in attacks:
-        hp += ((i - start) // bandage[0]) * bandage[2] + (i - start) * bandage[1]
-        start = i + 1
-        if hp >= health:
-            hp = health
-        hp -= j
-        if hp <= 0:
-            return -1
-    return hp
+# Check if there is a winning row, column, or diagonal
+def check_win(player, board):
+    # Check rows
+    for i in range(3):
+        if all(cell == player for cell in board[i]):
+            return True
+
+    # Check columns
+    for j in range(3):
+        if all(board[i][j] == player for i in range(3)):
+            return True
+
+    # Check diagonals
+    if all(board[i][i] == player for i in range(3)):
+        return True
+    if all(board[i][2-i] == player for i in range(3)):
+        return True
+
+    return False
+
+def solution(board):
+    num_x = sum(row.count('X') for row in board)
+    num_o = sum(row.count('O') for row in board)
+
+    if num_x - num_o > 0 or abs(num_x - num_o) > 1:
+        return 0
+
+    elif (check_win('O', board) and num_x != num_o - 1) or (check_win('X', board) and num_x != num_o):
+        return 0
+
+    return 1
 ```
 
+```
+def won(board, t):
+    # 가로줄 판단.
+    for row in board:
+        if row == [t, t, t]:
+            return True
+        
+    # 세로줄 판단.
+    for col in range(3):
+        if [board[row][col] for row in range(3)] == [t, t, t]:
+            return True
+        
+    # 대각선 판단.
+    if [board[0][0], board[1][1], board[2][2]] == [t, t, t]:
+        return True
+    if [board[2][0], board[1][1], board[0][2]] == [t, t, t]:
+        return True
+    
+    return False
+```
 사용 개념
 
-- attacks의 배열 요소를 각각 i, j 로 받아서 사용함
-- 즉 배열 각각의 요소에 index로 접근할 필요 없이 이렇게 사용할 수 있음
-- 이 방식으로 사용하면 range를 사용하지 않을 수 있음
+- sum 함수를 적절히 사용
+- abs 함수 사용
+- 각 성공에 대해 적절한 예외 처리
+- 밑의 경우에는 [t,t,t] 이라는 형식을 사용하여 비교
+
