@@ -40,3 +40,11 @@ index로 접근 하지 않고 i, j 한번에 사용 가능
 DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 결국 1시간이 넘어 답을 봤지만 생각했던 풀이가 맞았음
 ```
+
+- [두 원사이의 정수쌍](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%91%90%EC%9B%90%20%EC%82%AC%EC%9D%B4%EC%9D%98%20%EC%A0%95%EC%88%98%EC%8C%8D/README.md)
+
+```
+math 라이브러리 사용
+외부 라이브러리가 있을 것이란 생각을 망각
+수학적 생각을 심도있게 해봤어야함
+```
