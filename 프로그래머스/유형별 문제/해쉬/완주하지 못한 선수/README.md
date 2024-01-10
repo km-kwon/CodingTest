@@ -5,52 +5,48 @@
 성공 코드
 
 ```
-def solution(names, yearning, photos):
+def solution(participant, completion):
+    answer = ''
     value_dic = {}
-    answer = []
-    for i, name in enumerate(names):
-        value_dic[name] = yearning[i]
-    for photo in photos:
-        each_photo_value = 0
-        for person in photo:
-            each_photo_value += value_dic.get(person, 0)
-            ##값없으면 0 리턴
-        answer.append(each_photo_value)
-    return answer
+    for name in participant:
+        if (value_dic.get(name, -1)) != -1:
+            value_dic[name] += 1
+            continue
+        value_dic[name] = 1
+    for name in completion:
+        value_dic[name] -= 1
+        if value_dic[name] == 0:
+            value_dic.pop(name)
+    return list(value_dic)[0]
 ```
 
 사용 개념
 
-- dictionary 자료형
-- dictionary 자료형 선언 enmerate
-- for
-- 배열 선언
-- 배열 추가
-- dic에서 값 없으면 처리 (get)
-
+- 해쉬
+- 딕셔너리 자료형 사용
+- dic pop 사용
 ---
 
 다른 사람 코드 중 인상 깊었던 것
 
 ```
-def solution(name, yearning, photo):
-    dictionary = dict(zip(name,yearning))
-    scores = []
-    for pt in photo:
-        score = 0
-        for p in pt:
-            if p in dictionary:
-                score += dictionary[p]
-        scores.append(score)
-    return scores
+def solution(participant, completion):
+    participant.sort()
+    completion.sort()
+    for p, c in zip(participant, completion):
+        if p != c:
+            return p
+    return participant[-1]
+
+or
+
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
 ```
 
 사용 개념
 
-- 이사람은 zip을 사용했음
-
-그 외 다른 사람들은 그냥 index로만 사용해서 푼 사람들도 있는데
-시간 복잡도 생각하여 dictionary로 풀음
-
-index => O(n^2)
-dic => O(n)
+- collection 라이브러리 counter 사용
+- counter은 dic에 특화된 함수 \
+- 그 외 list나 dic 등 다양한 자료형에 사용할 수 있는 함수들 존재
