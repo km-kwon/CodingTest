@@ -2,6 +2,24 @@
 ---
 # 프로그래머스
 
+### 유형별
+---
+## 해쉬
+
+- [폰켓몬](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%ED%95%B4%EC%89%AC/%ED%8F%B0%EC%BC%93%EB%AA%AC)
+
+```
+딕셔너리 자료형 처리에 유용한 collection 라이브러리 사용
+딕셔너리 자료형은 해쉬를 사용하여 속도가 빠름
+```
+- [완주하지 못한 선수](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%ED%95%B4%EC%89%AC/%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80%20%EB%AA%BB%ED%95%9C%20%EC%84%A0%EC%88%98)
+
+```
+폰켓몬과 비슷한 유형의 문제이며 큰 차이는 존재X
+```
+
+---
+
 ### Level 1
 - [달리기 경주](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%201/%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC)
 
@@ -13,7 +31,8 @@ dictionary 자료형의 시간 복잡도를 활용하여 시간 초과 줄임
 - [추억 점수](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%201/%EC%B6%94%EC%96%B5%20%EC%A0%90%EC%88%98/README.md)
 
 ```
-달리기 경주에서 풀었던 문제와 비스사게 시간 복잡도를 고려해 dictionary를 사용하여 해결
+달리기 경주에서 풀었던 문제와 비스사게 시간 복잡도를
+고려해 dictionary를 사용하여 해결
 dictionary를 선언할때 서로 다른 배열을 페어로 선언 => zip사용
 ```
 
