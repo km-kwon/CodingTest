@@ -28,6 +28,13 @@
 큐를 실제로 구현.
 ```
 
+- [기능 개발](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EC%8A%A4%ED%83%9D%ED%81%90/%EA%B8%B0%EB%8A%A5%20%EA%B0%9C%EB%B0%9C/README.md)
+
+```
+pop을 사용한 큐 사용
+```
+
+
 ---
 ### Level 1
 - [달리기 경주](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%201/%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC)
