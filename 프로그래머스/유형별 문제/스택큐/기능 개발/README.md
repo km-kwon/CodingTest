@@ -1,53 +1,60 @@
-### 같은 숫자는 싫어
+### 기능 개발
 
 ---
 
 성공 코드
 
 ```
-def solution(participant, completion):
-    answer = ''
-    value_dic = {}
-    for name in participant:
-        if (value_dic.get(name, -1)) != -1:
-            value_dic[name] += 1
-            continue
-        value_dic[name] = 1
-    for name in completion:
-        value_dic[name] -= 1
-        if value_dic[name] == 0:
-            value_dic.pop(name)
-    return list(value_dic)[0]
+def solution(progresses, speeds):
+    answer = []
+    day = 0
+    while progresses:
+        count = 0
+        day += 1
+        for i in range(len(progresses)):
+            if speeds[i] * day + progresses[i] < 100:
+                break
+            count += 1
+        for i in range(count):
+            progresses.pop(0)
+            speeds.pop(0)
+        if count != 0:
+            answer.append(count)
+
+    return answer
 ```
 
 사용 개념
 
-- 해쉬
-- 딕셔너리 자료형 사용
-- dic pop 사용
+- pop 사용
+
 
 ---
 
 다른 사람 코드 중 인상 깊었던 것
 
 ```
-def solution(participant, completion):
-    participant.sort()
-    completion.sort()
-    for p, c in zip(participant, completion):
-        if p != c:
-            return p
-    return participant[-1]
-
-or
-
-def solution(participant, completion):
-    answer = collections.Counter(participant) - collections.Counter(completion)
-    return list(answer.keys())[0]
+def solution(progresses, speeds):
+    print(progresses)
+    print(speeds)
+    answer = []
+    time = 0
+    count = 0
+    while len(progresses)> 0:
+        if (progresses[0] + time*speeds[0]) >= 100:
+            progresses.pop(0)
+            speeds.pop(0)
+            count += 1
+        else:
+            if count > 0:
+                answer.append(count)
+                count = 0
+            time += 1
+    answer.append(count)
+    return answer
 ```
 
 사용 개념
 
-- collection 라이브러리 counter 사용
-- counter은 dic에 특화된 함수 \
-- 그 외 list나 dic 등 다양한 자료형에 사용할 수 있는 함수들 존재
+- for 문의 단계를 한번 더 줄임
+- 기존 생각에서 조금만 더 고민하면 나올 수 있던 생각일듯
