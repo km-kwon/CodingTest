@@ -34,6 +34,16 @@
 pop을 사용한 큐 사용
 ```
 
+---
+## 힙
+
+- [더 맵게](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%ED%9E%99/%EB%8D%94%20%EB%A7%B5%EA%B2%8C/README.md)
+
+```
+정렬 알고리즘 중 하나인 heap 알고리즘사용
+시간복잡도 nlogn으로 기존 sort n^2에 비해 훨씬 빠른 속도로 출력 가능
+```
+
 
 ---
 ### Level 1
