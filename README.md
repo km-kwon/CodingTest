@@ -47,13 +47,13 @@ pop을 사용한 큐 사용
 
 ---
 ## 완전 탐색
-- [최소 직사각형] ()
+- [최소 직사각형](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/%EC%B5%9C%EC%86%8C%20%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95)
 
 ```
 완전 탐색이니 만큼 큰 어려움은 존재 X
 ```
 
-- [모의고사] ()
+- [모의고사](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC)
 
 ```
 수학적 능력이 좀 필요하다 생각
