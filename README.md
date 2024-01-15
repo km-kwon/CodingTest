@@ -46,6 +46,21 @@ pop을 사용한 큐 사용
 
 
 ---
+## 완전 탐색
+- [최소 직사각형] ()
+
+```
+완전 탐색이니 만큼 큰 어려움은 존재 X
+```
+
+- [모의고사] ()
+
+```
+수학적 능력이 좀 필요하다 생각
+```
+
+  
+---
 ### Level 1
 - [달리기 경주](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%201/%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC)
 
