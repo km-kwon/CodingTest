@@ -5,31 +5,28 @@
 성공 코드
 
 ```
-import heapq
+def solution(number, k):
+    answer = []
+    for i in number:
+        if not answer:
+            answer.append(i)
+            continue
+        while answer and answer[-1] < i and k > 0:
+            answer.pop()
+            k -= 1
+        answer.append(i)
+    if k > 0:
+        answer = answer[:-k]
+    return ''.join(answer)
 
-
-def solution(scoville, K):
-    heapq.heapify(scoville)
-
-    answer = 0
-    while scoville[0] < K:
-        if len(scoville) == 1:
-            return -1
-        heapq.heappush(scoville, heapq.heappop(
-            scoville) + heapq.heappop(scoville)*2)
-        answer += 1
-    return answer
 
 ```
 
 사용 개념
 
-- 힙 정렬
-- heapq 외부 라이브러리 사용
-
+- 스택
+- 그리디에서는 스택을 자주 사용할것 같음
+- 앞과 뒤만 비교해서 최적해를 찾는과정 => stack이 좋을듯
+- answer[:-1] 은 마지막만 뺴고 리턴
+- 배열 문자열로 ''.join
 ---
-
-사용 개념
-
-- 기존 파이썬 sort 사용시 시간 초과
-- heapq 정렬을 사용하면 nlogn의 시간복잡도로 더 빠르게 해결 가능
