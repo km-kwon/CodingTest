@@ -59,6 +59,14 @@ pop을 사용한 큐 사용
 수학적 능력이 좀 필요하다 생각
 ```
 
+---
+## 그리디
+- [큰 수 만들기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EA%B7%B8%EB%A6%AC%EB%94%94/%ED%81%B0%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0/README.md)
+
+```
+인점 값들 비교 => stack 활용방안 고민
+다른 풀이도 비교
+```
   
 ---
 ### Level 1
