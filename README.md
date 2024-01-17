@@ -67,6 +67,19 @@ pop을 사용한 큐 사용
 인점 값들 비교 => stack 활용방안 고민
 다른 풀이도 비교
 ```
+
+---
+## BFS/DFS
+- [타겟 넘버](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DFS%2CBFS/%ED%83%80%EA%B2%9F%20%EB%84%98%EB%B2%84)
+```
+스택과 비슷한 개념 사용
+일종의 브루트 포스 방법 사용
+```
+- [네트워크](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DFS%2CBFS/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)
+```
+BFS 근접 노드 우선 탐색 방법 활용
+Stack 활용하여 해결
+```
   
 ---
 ### Level 1
