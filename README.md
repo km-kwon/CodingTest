@@ -80,6 +80,14 @@ pop을 사용한 큐 사용
 BFS 근접 노드 우선 탐색 방법 활용
 Stack 활용하여 해결
 ```
+---
+## 그래프
+- [가장 먼 노드](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EA%B7%B8%EB%9E%98%ED%94%84/%EA%B0%80%EC%9E%A5%20%EB%A8%BC%20%EB%85%B8%EB%93%9C)
+```
+BFS을 사용하여 해결
+그래프 간의 관계를 이차원에서 일차원으로
+시간 복잡도 고려하여 해결
+```
   
 ---
 ### Level 1
