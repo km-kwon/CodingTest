@@ -36,7 +36,6 @@ def solution(n, edge):
 - for _ 사용 가능
 ---
 
----
 
 실패 코드
 
