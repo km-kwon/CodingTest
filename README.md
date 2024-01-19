@@ -18,6 +18,19 @@
 폰켓몬과 비슷한 유형의 문제이며 큰 차이는 존재X
 ```
 
+
+- [전화번호 목록](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%ED%95%B4%EC%89%AC/%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D)
+
+```
+list의 dictionary 자료형 화(fromkeys 사용) 
+```
+
+- [의상](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%ED%95%B4%EC%89%AC/%EC%9D%98%EC%83%81)
+
+```
+dictionary values 값 순회
+```
+
 ---
 
 ## 스택 / 큐
