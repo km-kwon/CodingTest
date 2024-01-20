@@ -46,6 +46,10 @@ dictionary values 값 순회
 ```
 pop을 사용한 큐 사용
 ```
+-[가장 큰수](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EC%8A%A4%ED%83%9D%ED%81%90/%EC%98%AC%EB%B0%94%EB%A5%B8%20%EA%B4%84%ED%98%B8)
+```
+IndexError 사용횟수 늘려보기
+```
 
 ---
 ## 힙
@@ -100,6 +104,14 @@ Stack 활용하여 해결
 BFS을 사용하여 해결
 그래프 간의 관계를 이차원에서 일차원으로
 시간 복잡도 고려하여 해결
+```
+
+---
+## 정렬
+- [가장 큰수](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EC%A0%95%EB%A0%AC/%EA%B0%80%EC%9E%A5%20%ED%81%B0%EC%88%98)
+
+```
+ASCII값으로 str 변환 후 비교과정 
 ```
   
 ---
