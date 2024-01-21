@@ -60,7 +60,13 @@ IndexError 사용횟수 늘려보기
 정렬 알고리즘 중 하나인 heap 알고리즘사용
 시간복잡도 nlogn으로 기존 sort n^2에 비해 훨씬 빠른 속도로 출력 가능
 ```
+- [디스크 컨트롤러](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%ED%9E%99/%EB%94%94%EC%8A%A4%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC)
 
+```
+힙 정렬 알고리즘 사용했지만 수학적 능력이 부족한것 같음
+시간복잡도는 통과
+일부 테스트 케이스 불통 원인 분석중
+```
 
 ---
 ## 완전 탐색
