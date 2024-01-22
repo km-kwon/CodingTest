@@ -168,3 +168,10 @@ math 라이브러리 사용
 외부 라이브러리가 있을 것이란 생각을 망각
 수학적 생각을 심도있게 해봤어야함
 ```
+
+- [연속된 부분수열의 합](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EC%97%B0%EC%86%8D%EB%90%9C%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9)
+
+```
+이중 포인터 알고리즘 사용
+이중 for문 지양
+```
