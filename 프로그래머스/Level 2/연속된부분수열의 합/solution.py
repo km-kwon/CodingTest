@@ -1,53 +1,45 @@
-def solution(sequence, k):
-    position = []
-    position_value = []
-    start = 0
-    end = 0
-    sum = sequence[0]
-    while start <= end and end < len(sequence):
-        if sum < k:
-            if end+1 == len(sequence):
-                break
-            end += 1
-            sum += sequence[end]
-            continue
-        if sum > k:
-            sum -= sequence[start]
-            start += 1
-            continue
-        if sum == k:
-            position_value.append(end-start)
-            position.append([start, end])
-            if end+1 == len(sequence):
-                break
-            end += 1
-            sum += sequence[end]
-    # print(position[position_value.index(min(position_value))])
-    return position[position_value.index(min(position_value))]
+def solution(n, roads, sources, destination):
+    answer = []
+    roads.sort()
+    cur_road = [[] for i in range(n)]
+    for i in (roads):
+        cur_road[i[0]-1].append(i[1]-1)
+        cur_road[i[1]-1].append(i[0]-1)
+    stack = [destination-1]
+    check = [-1] * n
+    check[destination-1] = 0
+    while stack:
+        cur_position = stack.pop(0)
+        for j in cur_road[cur_position]:
+            if check[j] == -1:
+                check[j] = check[cur_position]+1
+                stack.append(j)
+    for i in sources:
+        answer.append(check[i-1])
+    return answer
 
 
-# solution([1, 2, 3, 4, 5], 7)
-solution([1, 1, 1, 2, 3, 4, 5], 5)
-solution([2, 2, 2, 2, 2], 6)
-
+# solution(3, [[1, 2], [2, 3]], [2, 3],	1)
+solution(5, [[1, 2], [1, 4], [2, 4], [2, 5], [4, 5]],	[1, 3, 5],	5)
 
 '''
-def solution(sequence, k):
-    position = []
-    position_idx = []
-    for i in range(len(sequence)):
-        value = 0
-        if sequence[i] > k:
-            break
-        for j in range(i, len(sequence)):
-            value += sequence[j]
-            if value > k:
-                break
-            if value == k:
-                position.append([i, j])
-                position_idx.append(j-i)
-                break
-    print(position[position_idx.index(min(position_idx))])
-    return position[position_idx.index(min(position_idx))]
-
+def solution(n, roads, sources, destination):
+    answer = []
+    roads.sort()
+    cur_road = [[] for i in range(n)]
+    for i in (roads):
+        cur_road[i[0]-1].append(i[1]-1)
+        cur_road[i[1]-1].append(i[0]-1)
+    for i in sources:
+        stack = [i-1]
+        check = [-1] * n
+        check[i-1] = 0
+        while stack:
+            cur_position = stack.pop(0)
+            for j in cur_road[cur_position]:
+                if check[j] == -1:
+                    check[j] = check[cur_position]+1
+                    stack.append(j)
+        answer.append(check[destination-1])
+    return answer
 '''
