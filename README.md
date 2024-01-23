@@ -175,3 +175,12 @@ math 라이브러리 사용
 이중 포인터 알고리즘 사용
 이중 for문 지양
 ```
+---
+### Leavel 3
+- [부대 복귀](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B6%80%EB%8C%80%20%EB%B3%B5%EA%B7%80_)
+
+```
+BFS 사용 및 발상의 전환
+출발지 기준으로 거리계산 => 출발지 수만큼 시간 복잡도 증가
+도착지 기준으로 거리계산 => 출발지 수 상관 없이 시간 복잡도 1
+```
