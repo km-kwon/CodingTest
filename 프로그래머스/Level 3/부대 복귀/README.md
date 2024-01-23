@@ -1,60 +1,65 @@
-### 혼자서 하는 틱택토
+### 부대 복귀
 
 ---
 
 성공 코드
 
 ```
-def solution(bandage, health, attacks):
-    cur_health = health
-    last_attack = int(attacks[len(attacks)-1][0])
-    cur_bandage = 0
-    for i in range(last_attack+1):
-        if attacks:
-            if i == attacks[0][0]:
-                cur_health -= attacks[0][1]
-                if cur_health <= 0:
-                    cur_health = -1
-                    break
-                attacks.pop(0)
-                cur_bandage = 0
-                continue
-        cur_health += bandage[1]
-        cur_bandage += 1
-        if cur_bandage == bandage[0]:
-            cur_health += bandage[2]
-            cur_bandage = 0
-        if cur_health > health:
-            cur_health = health
-    return cur_health
+def solution(n, roads, sources, destination):
+    answer = []
+    roads.sort()
+    cur_road = [[] for i in range(n)]
+    for i in (roads):
+        cur_road[i[0]-1].append(i[1]-1)
+        cur_road[i[1]-1].append(i[0]-1)
+    stack = [destination-1]
+    check = [-1] * n
+    check[destination-1] = 0
+    while stack:
+        cur_position = stack.pop(0)
+        for j in cur_road[cur_position]:
+            if check[j] == -1:
+                check[j] = check[cur_position]+1
+                stack.append(j)
+    for i in sources:
+        answer.append(check[i-1])
+    return answer
 ```
 
 사용 개념
 
-- 배열 pop 사용
-- 예외처리 사용
+- BFS 사용
+- 발상의 전환
 
 ---
 
-다른 사람 코드 중 인상 깊었던 것
+실패 코드
 
 ```
-def solution(bandage, health, attacks):
-    hp = health
-    start = 1
-    for i, j in attacks:
-        hp += ((i - start) // bandage[0]) * bandage[2] + (i - start) * bandage[1]
-        start = i + 1
-        if hp >= health:
-            hp = health
-        hp -= j
-        if hp <= 0:
-            return -1
-    return hp
+def solution(n, roads, sources, destination):
+    answer = []
+    roads.sort()
+    cur_road = [[] for i in range(n)]
+    for i in (roads):
+        cur_road[i[0]-1].append(i[1]-1)
+        cur_road[i[1]-1].append(i[0]-1)
+    for i in sources:
+        stack = [i-1]
+        check = [-1] * n
+        check[i-1] = 0
+        while stack:
+            cur_position = stack.pop(0)
+            for j in cur_road[cur_position]:
+                if check[j] == -1:
+                    check[j] = check[cur_position]+1
+                    stack.append(j)
+        answer.append(check[destination-1])
+    return answer
 ```
 
 사용 개념
 
-- attacks의 배열 요소를 각각 i, j 로 받아서 사용함
-- 즉 배열 각각의 요소에 index로 접근할 필요 없이 이렇게 사용할 수 있음
-- 이 방식으로 사용하면 range를 사용하지 않을 수 있음
+- 출발지 기준으로 for 문 수행
+- 그로인한 시간복잡도 증가
+- 역으로 destination을 기준으로 거리 계산
+
