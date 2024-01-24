@@ -119,7 +119,16 @@ BFS을 사용하여 해결
 ```
 ASCII값으로 str 변환 후 비교과정 
 ```
-  
+
+---
+## DP
+- [정수 삼각형](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DP/%EC%A0%95%EC%88%98%20%EC%82%BC%EA%B0%81%ED%98%95/README.md)
+
+```
+dp로 인한 동적 계획법
+배열 선언으로 이전 값 참조 => 계산 시간 줄어듦
+```
+
 ---
 ### Level 1
 - [달리기 경주](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%201/%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC)
