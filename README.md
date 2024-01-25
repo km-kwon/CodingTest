@@ -128,6 +128,12 @@ ASCII값으로 str 변환 후 비교과정
 dp로 인한 동적 계획법
 배열 선언으로 이전 값 참조 => 계산 시간 줄어듦
 ```
+- [등굣길](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DP/%EB%93%B1%EA%B5%A3%EA%B8%B8/README.md)
+
+```
+dp로 인한 동적 계획법
+2차원 배열 선언 및 이전 값 참조
+```
 
 ---
 ### Level 1
