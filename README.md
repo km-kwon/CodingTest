@@ -91,6 +91,13 @@ IndexError 사용횟수 늘려보기
 다른 풀이도 비교
 ```
 
+- [섬 연결하기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EA%B7%B8%EB%A6%AC%EB%94%94/%EC%84%AC%20%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/README.md)
+
+```
+최소 신장 트리 구하기
+크루스칼 알고리즘 사용
+```
+
 ---
 ## BFS/DFS
 - [타겟 넘버](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DFS%2CBFS/%ED%83%80%EA%B2%9F%20%EB%84%98%EB%B2%84)
