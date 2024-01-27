@@ -110,6 +110,13 @@ IndexError 사용횟수 늘려보기
 BFS 근접 노드 우선 탐색 방법 활용
 Stack 활용하여 해결
 ```
+
+- [단어 변환](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DFS,BFS/%EB%8B%A8%EC%96%B4%20%EB%B3%80%ED%99%98/README.md)
+
+```
+BFS을 화룡해 단어 탐색
+그래프가 아니어도 활용 가능
+```
 ---
 ## 그래프
 - [가장 먼 노드](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EA%B7%B8%EB%9E%98%ED%94%84/%EA%B0%80%EC%9E%A5%20%EB%A8%BC%20%EB%85%B8%EB%93%9C)
