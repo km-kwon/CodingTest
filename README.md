@@ -213,3 +213,10 @@ BFS 사용 및 발상의 전환
 출발지 기준으로 거리계산 => 출발지 수만큼 시간 복잡도 증가
 도착지 기준으로 거리계산 => 출발지 수 상관 없이 시간 복잡도 1
 ```
+
+- [입국 심사](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC/README.md)
+
+```
+배열의 길이가 긴 경우 이분 탐새 고려
+시간에 따른 최대 인원 고려
+```
