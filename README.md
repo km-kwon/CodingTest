@@ -220,3 +220,10 @@ BFS 사용 및 발상의 전환
 배열의 길이가 긴 경우 이분 탐새 고려
 시간에 따른 최대 인원 고려
 ```
+
+- [야근 지수](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%95%BC%EA%B7%BC%20%EC%A7%80%EC%88%98/README.md)
+
+```
+최대값 찾기 위해 최대 힙 사용
+for 문 선언에 대한 활용
+```
