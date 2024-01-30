@@ -227,3 +227,10 @@ BFS 사용 및 발상의 전환
 최대값 찾기 위해 최대 힙 사용
 for 문 선언에 대한 활용
 ```
+
+- [기지국 설치](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EA%B8%B0%EC%A7%80%EA%B5%AD%20%EC%84%A4%EC%B9%98/README.md)
+
+```
+그리디를 이용한 활용방법 => 중에서도 시간복잡도 고려
+N이 크다면 다른 방법을 생각하는 것도 좋은 방법
+```
