@@ -234,3 +234,9 @@ for 문 선언에 대한 활용
 그리디를 이용한 활용방법 => 중에서도 시간복잡도 고려
 N이 크다면 다른 방법을 생각하는 것도 좋은 방법
 ```
+- [단속 카메라](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%8B%A8%EC%86%8D%20%EC%B9%B4%EB%A9%94%EB%9D%BC/README.md)
+
+```
+그리디를 이용한 활용법
+최소 조건에 대한 고려 및 응용
+```
