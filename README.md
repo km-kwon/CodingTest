@@ -240,3 +240,9 @@ N이 크다면 다른 방법을 생각하는 것도 좋은 방법
 그리디를 이용한 활용법
 최소 조건에 대한 고려 및 응용
 ```
+
+- [베스트 앨범](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B2%A0%EC%8A%A4%ED%8A%B8%20%EC%95%A8%EB%B2%94/README.md)
+```
+문제를 제대로 주의하여 읽자
+lambda에 대해서 활용성을 높임
+```
