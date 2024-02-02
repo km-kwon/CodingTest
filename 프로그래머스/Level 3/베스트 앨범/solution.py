@@ -16,16 +16,14 @@ def solution(genres, plays):
     while dic:
         high_genres = max(dic, key=dic.get)
         count = 0
-        if dic_count[high_genres] >= 2:
-            for i in info:
-                if i[1] == high_genres:
-                    count += 1
-                    answer.append(-i[2])
-                    if count >= 2:
-                        break
+        for i in info:
+            if i[1] == high_genres:
+                count += 1
+                answer.append(-i[2])
+                if count >= 2:
+                    break
         dic.pop(high_genres)
         dic_count.pop(high_genres)
-    print(answer)
     return answer
 
 
