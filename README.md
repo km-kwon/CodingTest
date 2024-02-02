@@ -246,3 +246,10 @@ N이 크다면 다른 방법을 생각하는 것도 좋은 방법
 문제를 제대로 주의하여 읽자
 lambda에 대해서 활용성을 높임
 ```
+
+- [징검다리 건너기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC%20%EA%B1%B4%EB%84%88%EA%B8%B0/README.md)
+
+```
+이분 탐색
+배열의 길이 조건 확인
+```
