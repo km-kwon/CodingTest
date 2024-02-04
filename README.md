@@ -253,3 +253,10 @@ lambda에 대해서 활용성을 높임
 이분 탐색
 배열의 길이 조건 확인
 ```
+- [이중 우선순위 큐](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%9D%B4%EC%A4%91%20%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84%20%ED%81%90/README.md)
+
+```
+두개의 큐에 대해 동기화 문제
+max의 경우 O(N)이 걸림 그래서 해당 풀이는 O(NlogN))임
+하지만 이중 큐에 대해서 해결하면 O(log N log N)이 될거임
+```
