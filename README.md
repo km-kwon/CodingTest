@@ -260,3 +260,14 @@ lambda에 대해서 활용성을 높임
 max의 경우 O(N)이 걸림 그래서 해당 풀이는 O(NlogN))임
 하지만 이중 큐에 대해서 해결하면 O(log N log N)이 될거임
 ```
+
+- [숫자게임](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%88%AB%EC%9E%90%20%EA%B2%8C%EC%9E%84/README.md)
+
+```
+이분탐색을 이용한 풀이 실패
+다른 배열이 고정되서 주어졌다고 해서 고정관념 박힘
+```
+
+
+
+
