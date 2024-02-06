@@ -268,6 +268,19 @@ max의 경우 O(N)이 걸림 그래서 해당 풀이는 O(NlogN))임
 다른 배열이 고정되서 주어졌다고 해서 고정관념 박힘
 ```
 
+- [여행 경로](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%97%AC%ED%96%89%20%EA%B2%BD%EB%A1%9C/README.md)
+
+```
+BFS로 이용한 풀이 실패
+DFS활용
+각각의 특징을 잘 알아놔야 할듯 함
+
+```
+
+
+
+
+
 
 
 
