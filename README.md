@@ -277,6 +277,13 @@ DFS활용
 
 ```
 
+- [보석 쇼핑](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B3%B4%EC%84%9D%20%EC%87%BC%ED%95%91/README.md)
+
+```
+sub string 문제는 대부분 이중 포인터 문제인듯
+
+```
+
 
 
 
