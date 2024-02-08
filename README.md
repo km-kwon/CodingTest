@@ -285,7 +285,12 @@ sub string 문제는 대부분 이중 포인터 문제인듯
 ```
 
 
+- [표 편집](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%ED%91%9C%20%ED%8E%B8%EC%A7%91/README.md)
 
+```
+보통 구현 문제는 자료구조를 활용하여 하는 풀이가 존재
+링크드 리스트의 삽입 del 의 시간 복잡도는 O(1)임
+```
 
 
 
