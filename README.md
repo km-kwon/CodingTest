@@ -292,7 +292,11 @@ sub string 문제는 대부분 이중 포인터 문제인듯
 링크드 리스트의 삽입 del 의 시간 복잡도는 O(1)임
 ```
 
+- [연속 펄스 부분수열의 합](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%97%B0%EC%86%8D%20%ED%8E%84%EC%8A%A4%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9/README.md)
 
-
+```
+부분수열의 합과 같이 이전 내용 기억 => DP
+부분수열의 범위?? => 이중포인터 인듯 함
+```
 
 
