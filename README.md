@@ -204,6 +204,14 @@ math 라이브러리 사용
 이중 포인터 알고리즘 사용
 이중 for문 지양
 ```
+
+- [구명 보트](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EA%B5%AC%EB%AA%85%EB%B3%B4%ED%8A%B8/README.md)
+
+```
+pop을 이용한 리스트 수정은 시간 복잡도를 증가시킬 수 있음
+이를 해결한 것이 이중 포인터
+```
+
 ---
 ### Leavel 3
 - [부대 복귀](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B6%80%EB%8C%80%20%EB%B3%B5%EA%B7%80)
