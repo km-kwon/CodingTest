@@ -212,6 +212,13 @@ pop을 이용한 리스트 수정은 시간 복잡도를 증가시킬 수 있음
 이를 해결한 것이 이중 포인터
 ```
 
+- [2xN 타일링](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/2Xn%20%ED%83%80%EC%9D%BC%EB%A7%81/README.md)
+
+```
+dp를 활용한 가장 기본적인 문제
+점화식을 활용하여 해결
+```
+
 ---
 ### Leavel 3
 - [부대 복귀](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B6%80%EB%8C%80%20%EB%B3%B5%EA%B7%80)
