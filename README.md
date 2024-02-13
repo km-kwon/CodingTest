@@ -224,6 +224,13 @@ dp를 활용한 가장 기본적인 문제
 ```
 2xn 타일링과 같은 문제
 ```
+
+- [뒤에있는큰수찾기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%92%A4%EC%97%90%EC%9E%88%EB%8A%94%ED%81%B0%EC%88%98%EC%B0%BE%EA%B8%B0/README.md)
+
+```
+"가장 가까이" 라는 말이면 보통 스택일듯
+스택에 관한 시간 복잡도는 조금 생각을 해봐야할듯
+```
 ---
 ### Leavel 3
 - [부대 복귀](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B6%80%EB%8C%80%20%EB%B3%B5%EA%B7%80)
