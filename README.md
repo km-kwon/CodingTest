@@ -245,6 +245,11 @@ dp를 활용한 가장 기본적인 문제
 ```
 시간 복잡도에 너무 얽매이지 말것.
 ```
+
+- [무인도 여행](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%AC%B4%EC%9D%B8%EB%8F%84%20%EC%97%AC%ED%96%89/README.md)
+```
+BFS의 정석적인 문제
+```
 ---
 ### Leavel 3
 - [부대 복귀](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B6%80%EB%8C%80%20%EB%B3%B5%EA%B7%80)
