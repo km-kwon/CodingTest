@@ -117,6 +117,14 @@ Stack 활용하여 해결
 BFS을 화룡해 단어 탐색
 그래프가 아니어도 활용 가능
 ```
+
+- [미로 탈출](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%AF%B8%EB%A1%9C%ED%83%88%EC%B6%9C/README.md)
+```
+indexError에 대해서 너무 고민함
+단순히 길이가 넘어가면 핸들링 필요 X
+각 방향에 대해서 배열로 미리 선언
+```
+
 ---
 ## 그래프
 - [가장 먼 노드](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EA%B7%B8%EB%9E%98%ED%94%84/%EA%B0%80%EC%9E%A5%20%EB%A8%BC%20%EB%85%B8%EB%93%9C)
