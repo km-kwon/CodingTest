@@ -204,6 +204,11 @@ DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 다익스트라 알고리즘 사용
 일정 노드에서 최소 거리 구하기
 ```
+- [롤케이크 자르기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%A1%A4%EC%BC%80%EC%9D%B4%ED%81%AC%20%EC%9E%90%EB%A5%B4%EA%B8%B0/README.md)
+```
+단순 구현 문제
+해쉬 활용하여 시간복잡도 최소화
+```
 
 - [두 원사이의 정수쌍](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%91%90%EC%9B%90%20%EC%82%AC%EC%9D%B4%EC%9D%98%20%EC%A0%95%EC%88%98%EC%8C%8D/README.md)
 
