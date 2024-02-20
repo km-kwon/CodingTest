@@ -1,10 +1,3 @@
-### 게임 맵 최단거리
-
----
-
-성공 코드
-
-```
 from collections import deque
 
 
@@ -28,9 +21,7 @@ def solution(maps):
                 que.append((move_y, move_x, road+1))
 
     return check[y-1][x-1]
-```
 
-회고
 
-- 대표적인 BFS 문제
-- 별다른 어려움 없음
+solution([[1, 0, 1, 1, 1], [1, 0, 1, 0, 1], [
+         1, 0, 1, 1, 1], [1, 1, 1, 0, 1], [0, 0, 0, 0, 1]])
