@@ -118,6 +118,11 @@ BFS을 화룡해 단어 탐색
 그래프가 아니어도 활용 가능
 ```
 
+- [게임 맵 최단거리](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EA%B2%8C%EC%9E%84%20%EB%A7%B5%20%EC%B5%9C%EB%8B%A8%EA%B1%B0%EB%A6%AC/README.md)
+```
+띡히 큰 어려움은 없었는 BFS 문제
+```
+
 - [미로 탈출](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%AF%B8%EB%A1%9C%ED%83%88%EC%B6%9C/README.md)
 ```
 indexError에 대해서 너무 고민함
