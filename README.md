@@ -279,6 +279,7 @@ BFS의 정석적인 문제
 단순 계산 문제
 ```
 
+
 ---
 ### Leavel 3
 - [부대 복귀](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EB%B6%80%EB%8C%80%20%EB%B3%B5%EA%B7%80)
@@ -372,6 +373,14 @@ sub string 문제는 대부분 이중 포인터 문제인듯
 ```
 부분수열의 합과 같이 이전 내용 기억 => DP
 부분수열의 범위?? => 이중포인터 인듯 함
+```
+
+---
+### SQL
+- [인기있는 아이스크림](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/sql/%EC%9D%B8%EA%B8%B0%EC%9E%88%EB%8A%94%20%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC/README.md)
+
+```
+첫 sql 문제 order정렬 및 select
 ```
 
 
