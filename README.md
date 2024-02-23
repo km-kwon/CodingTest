@@ -203,6 +203,13 @@ DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 결국 1시간이 넘어 답을 봤지만 생각했던 풀이가 맞았음
 ```
 
+
+- [택배 상자](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%ED%83%9D%EB%B0%B0%20%EC%83%81%EC%9E%90/README.md)
+
+```
+스택을 사용하여 해결하면 쉽게 해결
+다만 문제 이해에 오래 걸림
+```
 - [주식 가격](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EC%A3%BC%EC%8B%9D%20%EA%B0%80%EA%B2%A9/README.md)
 
 ```
