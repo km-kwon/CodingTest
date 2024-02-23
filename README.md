@@ -303,6 +303,12 @@ BFS 사용 및 발상의 전환
 도착지 기준으로 거리계산 => 출발지 수 상관 없이 시간 복잡도 1
 ```
 
+- [최고의 집합](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%B5%9C%EA%B3%A0%EC%9D%98%20%EC%A7%91%ED%95%A9/README.md)
+
+```
+수학적 생각만 살짝 하면 쉽게 해결
+```
+
 - [입국 심사](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC/README.md)
 
 ```
