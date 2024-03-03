@@ -418,5 +418,8 @@ sub string 문제는 대부분 이중 포인터 문제인듯
 ```
 첫 sql 문제 order정렬 및 select
 ```
+- [조건에 맞는 아이템들의 가격의 총합 구하기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/sql/%EC%A1%B0%EA%B1%B4%EC%97%90%20%EB%A7%9E%EB%8A%94%20%EC%95%84%EC%9D%B4%ED%85%9C%EB%93%A4%EC%9D%98%20%EA%B0%80%EA%B2%A9%EC%9D%98%20%EC%B4%9D%ED%95%A9%20%EA%B5%AC%ED%95%98%EA%B8%B0/README.md)
 
-
+```
+where절에 서브 쿼리 활용
+```
