@@ -202,6 +202,11 @@ index로 접근 하지 않고 i, j 한번에 사용 가능
 DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 결국 1시간이 넘어 답을 봤지만 생각했던 풀이가 맞았음
 ```
+- [요격 시스템](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EC%9A%94%EA%B2%A9%20%EC%8B%9C%EC%8A%A4%ED%85%9C/README.md)
+```
+그리디 알고리즘을 활용하여 해결
+조건의 양식을 약간 수정하여 해결
+```
 
 - [다리를 지나는 트럭](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%8B%A4%EB%A6%AC%EB%A5%BC%20%EC%A7%80%EB%82%98%EB%8A%94%20%ED%8A%B8%EB%9F%AD/README.md)
 
