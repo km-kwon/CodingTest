@@ -202,7 +202,13 @@ index로 접근 하지 않고 i, j 한번에 사용 가능
 DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 결국 1시간이 넘어 답을 봤지만 생각했던 풀이가 맞았음
 ```
--[귤고르기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EA%B7%A4%EA%B3%A0%EB%A5%B4%EA%B8%B0/README.md)
+- [방문 길이](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%B0%A9%EB%AC%B8%20%EA%B8%B8%EC%9D%B4/README.md)
+```
+단순 구현 문제
+큰 어려움은 없었음
+```
+
+- [귤고르기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EA%B7%A4%EA%B3%A0%EB%A5%B4%EA%B8%B0/README.md)
 ```
 딕셔너리 사용 value 기준 정렬
 ```
