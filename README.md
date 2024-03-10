@@ -208,6 +208,12 @@ DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 큰 어려움은 없었음
 ```
 
+- [땅 파먹기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EB%95%85%ED%8C%8C%EB%A8%B9%EA%B8%B0/README.md)
+```
+그리디를 고민하였지만 dp로 해결
+```
+
+
 - [귤고르기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EA%B7%A4%EA%B3%A0%EB%A5%B4%EA%B8%B0/README.md)
 ```
 딕셔너리 사용 value 기준 정렬
