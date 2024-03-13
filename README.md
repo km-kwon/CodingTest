@@ -213,6 +213,10 @@ DP를 사용하려 풀려고 했지만 너무 어렵게 풀어서 실패
 그리디를 고민하였지만 dp로 해결
 ```
 
+- [숫자 변환하기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EC%88%AB%EC%9E%90%20%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0/README.md)
+```
+set 즉 집합을 이용하여 해결
+```
 
 - [귤고르기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/%EA%B7%A4%EA%B3%A0%EB%A5%B4%EA%B8%B0/README.md)
 ```
