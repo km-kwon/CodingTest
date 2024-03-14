@@ -339,6 +339,10 @@ BFS의 정석적인 문제
 ```
 그리디와 heapq를 사용한 풀이
 ```
+- [H-index](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202/H-index/README.md)
+```
+정렬을 이용한 심플한 풀이
+```
 
 ---
 ### Leavel 3
