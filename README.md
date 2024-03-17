@@ -414,6 +414,11 @@ max의 경우 O(N)이 걸림 그래서 해당 풀이는 O(NlogN))임
 다른 배열이 고정되서 주어졌다고 해서 고정관념 박힘
 ```
 
+- [가장 긴 팰린드롬](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EA%B0%80%EC%9E%A5%20%EA%B8%B4%20%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC/README.md)
+```
+배열의 ::-1을 활용한 뒤집기
+```
+
 - [여행 경로](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%97%AC%ED%96%89%20%EA%B2%BD%EB%A1%9C/README.md)
 
 ```
