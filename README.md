@@ -414,6 +414,11 @@ max의 경우 O(N)이 걸림 그래서 해당 풀이는 O(NlogN))임
 다른 배열이 고정되서 주어졌다고 해서 고정관념 박힘
 ```
 
+- [가장 긴 팰린드롬](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EA%B0%80%EC%9E%A5%20%EA%B8%B4%20%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC/README.md)
+```
+배열의 ::-1을 활용한 뒤집기
+```
+
 - [여행 경로](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203/%EC%97%AC%ED%96%89%20%EA%B2%BD%EB%A1%9C/README.md)
 
 ```
@@ -467,4 +472,9 @@ where 절에 서브 쿼리 활용
 - [조건에 맞는 도서와 저자 리스트 출력하기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/sql/%EC%A1%B0%EA%B1%B4%EC%97%90%20%EB%A7%9E%EB%8A%94%20%EB%8F%84%EC%84%9C%EC%99%80%20%EC%A0%80%EC%9E%90%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%20%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0/README.md)
 ```
 join을 사용하여 테이블 연결
+```
+- [가장 비싼 상품 구하기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/sql/%EA%B0%80%EC%9E%A5%20%EB%B9%84%EC%8B%BC%20%EC%83%81%ED%92%88%20%EA%B5%AC%ED%95%98%EA%B8%B0/README.md)
+
+```
+max 사용한 심플한 풀이
 ```
