@@ -468,3 +468,8 @@ where 절에 서브 쿼리 활용
 ```
 join을 사용하여 테이블 연결
 ```
+- [가장 비싼 상품 구하기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/sql/%EA%B0%80%EC%9E%A5%20%EB%B9%84%EC%8B%BC%20%EC%83%81%ED%92%88%20%EA%B5%AC%ED%95%98%EA%B8%B0/README.md)
+
+```
+max 사용한 심플한 풀이
+```
