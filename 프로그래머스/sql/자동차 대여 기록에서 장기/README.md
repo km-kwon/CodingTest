@@ -1,0 +1,21 @@
+### 자동차 대여 기록에서 장기/단기 대여 구분하기
+
+---
+
+성공 코드
+
+```
+SELECT HISTORY_ID,
+CAR_ID,
+DATE_FORMAT(START_DATE, '%Y-%m-%d') AS START_DATE,
+DATE_FORMAT(END_DATE, '%Y-%m-%d') AS END_DATE,
+IF(DATEDIFF(END_DATE, START_DATE) >= 29, '장기 대여', '단기 대여') AS RENT_TYPE
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+WHERE MONTH(START_DATE) = 9
+ORDER BY HISTORY_ID DESC
+
+```
+
+사용 개념
+
+- if 문 사용
