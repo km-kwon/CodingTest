@@ -1,8 +1,16 @@
 ### 코딩 테스트 대비
 ---
-# 프로그래머스
 
 ### 유형별
+---
+## 단순 구현
+
+- [게임 개발](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EA%B5%AC%ED%98%84/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/README.md)
+```
+단순 구현 내용
+순차적으로 하면 될듯?
+map을 이용해서 2차원 배열 삽입
+```
 ---
 ## 해쉬
 
@@ -129,6 +137,12 @@ indexError에 대해서 너무 고민함
 단순히 길이가 넘어가면 핸들링 필요 X
 각 방향에 대해서 배열로 미리 선언
 ```
+- [음료수 얼려먹기](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/BFS%2CDFS/%EC%9D%8C%EB%A3%8C%EC%88%98%20%EC%96%BC%EB%A0%A4%EB%A8%B9%EA%B8%B0/README.md)
+```
+오랜만에 초심 찾기
+최적화 방향 고려해 봐야할듯
+dir에 대해서 선언 고민
+```
 
 ---
 ## 그래프
@@ -161,7 +175,8 @@ dp로 인한 동적 계획법
 dp로 인한 동적 계획법
 2차원 배열 선언 및 이전 값 참조
 ```
-
+---
+# 프로그래머스
 ---
 ### Level 1
 - [달리기 경주](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%201/%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC)
