@@ -165,6 +165,16 @@ BFS을 사용하여 해결
 ASCII값으로 str 변환 후 비교과정 
 ```
 
+- [두 배열의 원소 교체](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EC%A0%95%EB%A0%AC/%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%EC%9B%90%EC%86%8C%20%EA%B5%90%EC%B2%B4/README.md)
+
+```
+sort 활용법
+```
+
+- [성적 낮은 순 출력](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EC%A0%95%EB%A0%AC/%EC%84%B1%EC%A0%81%20%EB%82%AE%EC%9D%80%EC%88%9C%20%EC%B6%9C%EB%A0%A5/README.md)
+```
+sort는 람다의 활용법이 중요하다.
+```
 ---
 ## DP
 - [정수 삼각형](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DP/%EC%A0%95%EC%88%98%20%EC%82%BC%EA%B0%81%ED%98%95/README.md)
