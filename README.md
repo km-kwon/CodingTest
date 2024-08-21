@@ -92,6 +92,14 @@ IndexError 사용횟수 늘려보기
 
 ---
 ## 그리디
+
+- [모험가 길드](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EA%B7%B8%EB%A6%AC%EB%94%94/%EB%AA%A8%ED%97%98%EA%B0%80%20%EA%B8%B8%EB%93%9C/README.md)
+
+```
+heap을 이용한 그리디
+단순 구현
+```
+
 - [큰 수 만들기](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EA%B7%B8%EB%A6%AC%EB%94%94/%ED%81%B0%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0/README.md)
 
 ```
@@ -157,6 +165,31 @@ BFS을 사용하여 해결
 시간 복잡도 고려하여 해결
 ```
 
+- [미래 도시](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C/%EB%AF%B8%EB%9E%98%20%EB%8F%84%EC%8B%9C/README.md)
+```
+다익스트라 알고리즘 사용하는 문제
+하지만 간선의 길이가 1이기 떄문에 BFS처럼 풀었음
+```
+- [전보](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C/%EC%A0%84%EB%B3%B4/README.md)
+```
+다익스트라 알고리즘
+```
+- [팀 결성](https://github.com/km-kwon/CodingTest/tree/main/%EC%B1%85/%EA%B7%B8%EB%9E%98%ED%94%84/%ED%8C%80%EA%B2%B0%EC%84%B1)
+```
+재귀 연습문제 개념
+재귀적으로 확인만 하면 되는듯
+```
+- [커리큘럼](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EA%B7%B8%EB%9E%98%ED%94%84/%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC/README.md)
+```
+위상정렬 사용해서 해결해야함
+하지만 dp 방식도 사용 가능해서 이걸로 해결
+```
+
+- [도시분할 계획](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EA%B7%B8%EB%9E%98%ED%94%84/%EB%8F%84%EC%8B%9C%20%EB%B6%84%ED%95%A0%20%EA%B3%84%ED%9A%8D/README.md)
+```
+heap정렬 활용해서 해결
+```
+
 ---
 ## 정렬
 - [가장 큰수](https://github.com/km-kwon/CodingTest/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/%EC%A0%95%EB%A0%AC/%EA%B0%80%EC%9E%A5%20%ED%81%B0%EC%88%98)
@@ -189,6 +222,41 @@ dp로 인한 동적 계획법
 dp로 인한 동적 계획법
 2차원 배열 선언 및 이전 값 참조
 ```
+
+- [1만들기](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/1%EB%A7%8C%EB%93%A4%EA%B8%B0/README.md)
+```
+단순한 DP문제
+일단 큰수부터 먼저 나눠보는게 핵심
+```
+- [개미 전사](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%EA%B0%9C%EB%AF%B8%20%EC%A0%84%EC%82%AC/README.md)
+```
+단순한 DP문제
+일단 큰수부터 먼저 나눠보는게 핵심
+```
+
+- [바닥공사](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%EB%B0%94%EB%8B%A5%EA%B3%B5%EC%82%AC/README.md)
+```
+단순한 DP문제
+점화식 세우는게 중요함
+```
+
+- [효율적인 화폐구성](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8%ED%99%94%ED%8F%90%EA%B5%AC%EC%84%B1/README.md)
+```
+조금 어려웠던 dp 문제
+생각해줘야했던 경우의 수가 있기에 헷갈림
+최적화는 고민해야할듯
+```
+
+
+---
+## 이진탐색
+- [떡볶이 떡 만들기](https://github.com/km-kwon/CodingTest/blob/main/%EC%B1%85/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EB%96%A1%20%EB%A7%8C%EB%93%A4%EA%B8%B0/README.md)
+
+```
+이진 탐색 개념을 실시
+이진 탐색을 실시할 경우 log n 만큼의 시간이 걸림
+```
+
 ---
 # 프로그래머스
 ---
