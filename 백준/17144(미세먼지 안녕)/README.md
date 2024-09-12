@@ -1,71 +1,91 @@
-### 드래곤 커브
+### 미세먼지 안녕
 
 성공 코드
 
 ```
-from collections import deque
 import copy
-dx = [1, 0, -1, 0]
-dy = [0, -1, 0, 1]
 
 
-def check(arr, x, y, dir, g):
+def spread(arr, row, col):
+    dx = [0, 1, 0, -1]
+    dy = [-1, 0, 1, 0]
+    afterSpread = [[0]*col for _ in range(row)]
+    for y in range(row):
+        for x in range(col):
+            if arr[y][x] == -1:
+                afterSpread[y][x] = -1
+            elif arr[y][x] != 0 and arr[y][x] != -1:
+                spreadValue = arr[y][x] // 5
+                count = 0
+                for dir in range(4):
+                    nx = x + dx[dir]
+                    ny = y + dy[dir]
+                    if nx >= 0 and nx < col and ny >= 0 and ny < row and arr[ny][nx] != -1:
+                        count += 1
+                        afterSpread[ny][nx] += spreadValue
+                afterSpread[y][x] += (arr[y][x] - (spreadValue*count))
+    return afterSpread
 
-    dots = deque()
-    arr[y][x] = 1
-    arr[y + dy[dir]][x + dx[dir]] = 1
-    dots.appendleft((x, y))
-    dots.appendleft((x + dx[dir], y + dy[dir]))
-    for i in range(g):
-        curX, curY = dots[0]
-        tempDots = copy.deepcopy(dots)
-        for j in range(1, len(tempDots)):
-            tempDir = [tempDots[j][0]-tempDots[j-1]
-                       [0], tempDots[j][1]-tempDots[j-1][1]]
-            # 이전에서 지금이 위
-            if tempDir[0] == 0 and tempDir[1] == -1:
-                curX += 1
-            # 오른쪽
-            elif tempDir[0] == 1 and tempDir[1] == 0:
-                curY += 1
-            # 아래
-            elif tempDir[0] == 0 and tempDir[1] == 1:
-                curX -= 1
-            # 왼쪽
-            elif tempDir[0] == -1 and tempDir[1] == 0:
-                curY -= 1
-            arr[curY][curX] = 1
-            dots.appendleft((curX, curY))
+
+def cleaning(arr, air, row, col):
+    temp = copy.deepcopy(arr)
+    for i in range(2,col):
+        arr[air[0]][i] = temp[air[0]][i-1]
+    for i in range(0,air[0]):
+        arr[i][col-1] = temp[i+1][col-1]
+    for i in range(0,col-1):
+        arr[0][i] = temp[0][i+1]
+    for i in range(1,air[0]):
+        arr[i][0] = temp[i-1][0]
+
+    for i in range(2, col):
+        arr[air[1]][i] = temp[air[1]][i-1]
+    for i in range(air[1]+1, row):
+        arr[i][col-1] = temp[i-1][col-1]
+    for i in range(0,col-1):
+        arr[row-1][i] = temp[row-1][i+1]
+    for i in range(air[1]+1, row-1):
+        arr[i][0] = temp[i+1][0]
+    arr[air[1]][1] = 0
+    arr[air[0]][1] = 0
     return
 
 
 def solution():
-    n = int(input())
+
+    row, col, time = map(int, input().split())
+    arr = []
+    air = []
+    for i in range(row):
+        temp = list(map(int, input().split()))
+        arr.append(temp)
+    for i in range(row):
+        if arr[i][0] == -1:
+            air.append(i)
+    for i in range(time):
+        arr = spread(arr, row, col)
+        cleaning(arr, air, row, col)
     count = 0
-    arr = [[0]*101 for _ in range(101)]
-    for i in range(n):
-        x, y, dir, g = map(int, input().split())
-        check(arr, x, y, dir, g)
-    for i in range(100):
-        for j in range(100):
-            if arr[i][j] == 1 and arr[i+1][j] == 1 and arr[i][j+1] == 1 and arr[i+1][j+1] == 1:
-                count += 1
+    for i in range(row):
+        for j in range(col):
+            if arr[i][j] != -1 and arr[i][j] != 0:
+                count+= arr[i][j]
     print(count)
     return
 
 
 solution()
+
 ```
 
 # 사용 개념
 
-- 구현
-- 브루트포스
-- 시뮬레이션
+-   구현
+-   단순 시뮬레이션
 
 ---
 
 # 새겨놔야 할점
 
-- 딱히 큰 어려움은 없었음
-- 약간 공식확인하는 습관 필요
+-   딱히 큰 어려움은 없었음
+-   칸 이동에 대해서는 최적화 고민해야할듯
