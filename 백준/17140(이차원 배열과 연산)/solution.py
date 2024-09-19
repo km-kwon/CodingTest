@@ -1,22 +1,24 @@
 import copy
+
+
 def cal(row, col, arr):
     temp = copy.deepcopy(arr)
     maxLen = 0
-    result =[]
+    result = []
     for i in range(row):
         row_result = []
         dic = {}
-        sort_temp  = []
+        sort_temp = []
         for j in range(col):
             if temp[i][j] == 0:
                 continue
             if not temp[i][j] in dic:
-                dic[temp[i][j]] = [1,temp[i][j]]
-            else: 
-                dic[temp[i][j]][0] +=1
+                dic[temp[i][j]] = [1, temp[i][j]]
+            else:
+                dic[temp[i][j]][0] += 1
         for j in dic.values():
             sort_temp.append(j)
-        sort_temp = sorted(sort_temp,key=  lambda x:(x[0],x[1]))
+        sort_temp = sorted(sort_temp, key=lambda x: (x[0], x[1]))
         for j in sort_temp:
             row_result.append(j[1])
             row_result.append(j[0])
@@ -25,44 +27,42 @@ def cal(row, col, arr):
     for i in range(len(result)):
         for j in range(maxLen-len(result[i])):
             result[i].append(0)
+    for i in range(len(result)):
+        result[i] = result[i][:100]
     return result
 
 
 def solution():
-    r, c, k = map(int,input().split())
+    r, c, k = map(int, input().split())
     r = r-1
     c = c-1
     time = 0
     arr = []
     for i in range(3):
-        arr.append(list(map(int,input().split())))
+        arr.append(list(map(int, input().split())))
     while True:
-        if arr[r][c] == k:
-            print(time)
-            break
-        arr = cal(len(arr), len(arr[0]), arr)
-        time+=1
-        if time > 100:
-            print(-1)
-            break
-        if arr[r][c] == k:
-            print(time)
-            break
-        arr = list(zip(*arr))
-        arr = cal(len(arr), len(arr[0]), arr)
-        arr = list(zip(*arr))
-        time+=1
-        if time > 100:
-            print(-1)
-            break
-        if arr[r][c]==k:
-            print(time)
-            break
+        row = len(arr)
+        col = len(arr[0])
+        if row > r and col > c:
+            if arr[r][c] == k and time <= 100:
+                print(time)
+                break
+            elif time > 100:
+                print(-1)
+                break
+        if row >= col:
+            arr = cal(row, col, arr)
+            time += 1
+        elif row < col:
+            arr = list(zip(*arr))
+            arr = cal(col, row, arr)
+            arr = list(zip(*arr))
+            time += 1
+
     return
 
+
 solution()
-
-
 
 
 """ import copy
