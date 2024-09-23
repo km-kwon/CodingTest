@@ -1,42 +1,117 @@
-### 1만들기
+### 톱니바퀴
 
 성공 코드
 
 ```
 from collections import deque
+import copy
 
-def solution():
-    n = int(input())
-    arr = [0]*(n+1)
-    arr[1] = 0
-    for i in range(2,n+1):
-        if i%5 ==0:
-            arr[i] = min(arr[i-1], arr[i//5])
-            arr[i] += 1
-        elif i%3 == 0:
-            arr[i] = min(arr[i-1], arr[i//3])
-            arr[i] += 1
-        elif i%2 == 0:
-            arr[i] = min(arr[i-1], arr[i//2])
-            arr[i] += 1
-        else:
-            arr[i] = arr[i-1]+1
-    print(arr[n])
-    return 0
+# 2랑 6
+gear = []
+for i in range(4):
+    gear.append(deque(list(map(int, input()))))
 
 
-solution()
+def turn(gearNum, dir):
+    # 기어1
+    global gear
+    # 시계
+    if dir == 1:
+        last = gear[gearNum].pop()
+        gear[gearNum].appendleft(last)
+    # 반시계
+    elif dir == -1:
+        first = gear[gearNum].popleft()
+        gear[gearNum].append(first)
+    return
+
+
+n = int(input())
+for i in range(n):
+    gearNum, dir = map(int, input().split())
+    gearNum -= 1
+    temp = []
+    isRound = [False]*4
+
+    for j in range(4):
+        temp.append(gear[j].copy())
+
+    if gearNum == 0:
+        turn(0, dir)
+        isRound[0] = True
+        dir *= -1
+        if temp[0][2] != temp[1][6]:
+            turn(1, dir)
+            isRound[1] = True
+            dir *= -1
+        if temp[1][2] != temp[2][6] and isRound[1]:
+            turn(2, dir)
+            isRound[2] = True
+            dir *= -1
+        if temp[2][2] != temp[3][6] and isRound[2]:
+            turn(3, dir)
+            isRound[3] = True
+
+    elif gearNum == 1:
+        turn(1, dir)
+        isRound[1] = True
+        dir *= -1
+        if temp[1][2] != temp[2][6]:
+            turn(2, dir)
+            isRound[2] = True
+        if temp[0][2] != temp[1][6]:
+            turn(0, dir)
+        if temp[2][2] != temp[3][6] and isRound[2]:
+            dir *= -1
+            turn(3, dir)
+            isRound[3] = True
+
+    elif gearNum == 2:
+        turn(2, dir)
+        isRound[2] = True
+        dir *= -1
+        if temp[1][2] != temp[2][6]:
+            turn(1, dir)
+            isRound[1] = True
+        if temp[2][2] != temp[3][6]:
+            turn(3, dir)
+            isRound[3] = True
+        if temp[0][2] != temp[1][6] and isRound[1]:
+            dir *= -1
+            turn(0, dir)
+
+    elif gearNum == 3:
+        turn(3, dir)
+        isRound[3] = True
+        dir *= -1
+        if temp[2][2] != temp[3][6]:
+            turn(2, dir)
+            isRound[2] = True
+            dir *= -1
+        if temp[1][2] != temp[2][6] and isRound[2]:
+            turn(1, dir)
+            isRound[1] = True
+            dir *= -1
+        if temp[0][2] != temp[1][6] and isRound[1]:
+            turn(0, dir)
+            isRound[1] = True
+            dir *= -1
+count = 0
+score = 1
+for i in gear:
+    if i[0] == 1:
+        count += score
+    score *= 2
+print(count)
 
 ```
 
 # 사용 개념
 
--   단순한 DP문제
--   일단 큰수부터 먼저 나눠보는게 핵심
+-   빡구현
 
 ---
 
 # 새겨놔야 할점
 
--   그전에 쓰였던 값을 다시 쓸수 있느냐?
--   어떤 연산 다음에 이전값을 사용한다면 DP인거임
+-   뭔가 최적화 가능할것 같긴한데 연속적인 느낌이라 힘듦

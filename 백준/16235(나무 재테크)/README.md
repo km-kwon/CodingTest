@@ -1,68 +1,96 @@
-### 1만들기
+### 나무 재테크
 
 성공 코드
 
 ```
-import sys
-sys.setrecursionlimit(10**8)
+import heapq
+from collections import deque
 
-N, M = map(int, input().split())  # N은 격자 사이즈, M은 치킨집 개수
-graph = []
-house = []
-chicken = []
+n, m, k = map(int, input().split())
 
+year = 0
 
-for col in range(N):
-    graph.append(list(map(int, input().split())))
-    for row in range(N):
-        if graph[col][row] == 1:
-            house.append((col, row))
+# 각 칸 현재 양분
+food = [[5]*n for _ in range(n)]
 
-        elif graph[col][row] == 2:
-            chicken.append((col, row))
+# 겨울에 로봇이 주는 양분
+robot = []
+for i in range(n):
+    robot.append(list(map(int, input().split())))
 
+# 각 칸에 나무의 정보
+tree = {}
 
-arr = []
-real_check = int(1e9)
+for i in range(m):
+    y, x, age = map(int, input().split())
+    y = y-1
+    x = x-1
+    # 나무 정보 입력
+    if not (y, x) in tree:
+        tree[(y, x)] = deque()
+    tree[(y, x)].append(age)
 
+while year != k:
+    # 봄
+    # 봄에 양분을 먹지 못한 나무들
+    noEatTree = deque()
+    addTree = deque()
 
-def back(num, cnt):
-    global real_check
-    if num > len(chicken):
-        return
+    for loc, values in tree.items():
+        eatTree = deque()
+        while values:
+            # 양분을 먹은 나무들
+            cur = values.popleft()
+            if food[loc[0]][loc[1]] >= cur:
+                # 양분을 먹었다면 양분 먹은 후 나이
+                food[loc[0]][loc[1]] -= cur
+                eatTree.append(cur+1)
+                if (cur+1) % 5 == 0:
+                    addTree.append((loc[0], loc[1]))
+            # 이번 순서 나무가 양분을 못먹으면
+            else:
+                noEatTree.append((loc[0], loc[1], cur))
+        tree[(loc[0], loc[1])] = eatTree
 
-    if cnt == M:
-        result_tot = 0
-        for hx, hy in house:
-            min_check = int(1e9)
-            for idx in arr:
-                cx, cy = chicken[idx]
-                min_check = min(min_check, abs(hx-cx)+abs(hy-cy))
+    # 여름
+    for i, j, age in noEatTree:
+        food[i][j] += age // 2
 
-            result_tot += min_check
+    # 가을
+    for y, x in addTree:
+        for row in range(-1, 2):
+            for col in range(-1, 2):
+                if row == 0 and col == 0:
+                    continue
+                ny = y + row
+                nx = x + col
+                if ny >= 0 and ny < n and nx >= 0 and nx < n:
+                    if not (ny, nx) in tree:
+                        tree[(ny, nx)] = deque()
+                    tree[(ny, nx)].appendleft(1)
 
-        real_check = min(result_tot, real_check)
-        return
+    # 겨울
+    for i in range(n):
+        for j in range(n):
+            food[i][j] += robot[i][j]
 
-    arr.append(num)
-    back(num+1, cnt+1)
-    arr.pop()
-    back(num+1, cnt)
-    return real_check
+    year += 1
 
-
-print(back(0, 0))
-
+count = 0
+for value in tree.values():
+    count += len(value)
+print(count)
 
 ```
 
 # 사용 개념
 
-- dfs 백트래킹
+-   딕셔너리
+-   정렬
 
 ---
 
 # 새겨놔야 할점
 
-- 못풀었음
-- 시간초과 및 dfs 사용법을 좀 더 익숙해져야할듯
+-   heap에 너무 의존 X
+-   heap도 넣을때마다 정렬하는 건 같음
