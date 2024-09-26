@@ -36,7 +36,7 @@ def plus(cx,cy):
     for dir in range(4):
         nx = cx + dx[dir]
         ny = cy + dy[dir]
-        if nx>=0 and nx<m and ny >=0 and ny < n and not (ny,nx):
+        if nx>=0 and nx<m and ny >=0 and ny < n:
             temp.append(arr[ny][nx])
     if len(temp) >=3:
         temp.sort(reverse=True)
