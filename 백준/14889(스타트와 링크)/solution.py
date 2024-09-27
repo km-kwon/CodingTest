@@ -9,34 +9,28 @@ team = [-1]*n
 minValue = 1e9
 
 
-def sol(start, n, team):
+def sol(start, n, team, num1):
     global arr
     global minValue
-    if not -1 in team:
-        aval1 = 0
-        aval2 = 0
-        start = []
-        link = []
+    if num1 == n/2 :
+        start = 0
+        link = 0
         for i in range(n):
-            if team[i] == 1:
-                start.append(i)
-                for j in start:
-                    aval1 += (arr[j-1][i-1] + arr[i-1][j-1])
-            elif team[i] == 2:
-                link.append(i)
-                for j in link:
-                    aval2 += (arr[j-1][i-1] + arr[i-1][j-1])
-        minValue = min(minValue, abs(aval1-aval2))
+            for j in range(i,n):
+                if team[i] == team[j] and team[i] == 1 and i!=j:
+                    start+= (arr[j][i] + arr[i][j])
+                elif team[i] == team[j] and team[i] == -1 and i!=j:
+                    link += (arr[j][i] + arr[i][j])
+        minValue = min(minValue, abs(start-link))
         return
-    for i in range(start, n):
-        team[i] = 1
-        sol(i+1, n, team)
-        team[i] = 2
-        sol(i+1, n, team)
-        team[i] = -1
+    else:
+        for i in range(start, n):
+            team[i] = 1
+            sol(i+1, n, team, num1+1)
+            team[i] = -1
     return
 
 
-sol(0, n, team)
+sol(0, n, team,0)
 
 print(minValue)
