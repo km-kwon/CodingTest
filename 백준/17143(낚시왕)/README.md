@@ -1,54 +1,75 @@
-### 회전 초밥
+### 낚시왕
 
 성공 코드
 
 ```
+from collections import deque
 
-n,d,k,c = map(int,input().split())
+dx = [0, 0, 1, -1]
+dy = [-1, 1, 0 ,0]
 
-maxValue = 0
+count = 0
 
-arr = []
-check  = {}
-for i in range(n):
-    arr.append(int(input()))
+R,C,m = map(int,input().split())
+shark = {}
 
-for i in range(k):
-    arr.append(arr[i])
-    if not arr[i] in check:
-        check[arr[i]] = 1
-    else:
-        check[arr[i]] +=1
-start  = 0
-end = k
-while end < len(arr):
-    if not c in check:
-        maxValue = max(maxValue, len(check)+1)
-    else:
-        maxValue = max(maxValue, len(check))
+for i in range(m):
+    r,c,s,d,z = map(int,input().split())
+    r = r-1
+    c = c-1
+    shark[(r,c)] = (z,s,d-1)
+    # z: 사이즈 s: 속력 d-1 : 방향
 
-    if not arr[end] in check:
-        check[arr[end]] = 1
-    else:
-        check[arr[end]] +=1
+for cur in range(C):
+    for j in range(R):
+        if (j,cur) in shark:
+            count += shark[(j,cur)][0]
+            del shark[(j,cur)]
+            break
+    temp = []
+    for i,j in shark.keys():
+        curx = j
+        cury = i
+        curZ, curSpeed, curDir = shark[(i,j)]
+        if curDir == 0 or curDir == 1:
+            curSpeed = curSpeed % (2*(R-1))
+        else:
+            curSpeed = curSpeed% (2*(C-1))
+        for k in range(curSpeed):
+            if curx + dx[curDir]<0 or curx + dx[curDir]>=C or cury + dy[curDir] < 0 or cury + dy[curDir]>=R:
+                if curDir == 0:
+                    curDir = 1
+                elif curDir == 1:
+                    curDir = 0
+                elif curDir == 2:
+                    curDir = 3
+                elif curDir == 3:
+                    curDir = 2
+            curx = curx + dx[curDir]
+            cury = cury + dy[curDir]
+        temp.append((cury,curx,curZ, curSpeed, curDir))
+    afterShark = {}
+    for y,x,z,speed,dir in temp:
+        if not (y,x) in afterShark:
+            afterShark[(y,x)] = (z,speed,dir)
+        else:
+            if afterShark[(y,x)][0] > z:
+                continue
+            else:
+                afterShark[(y,x)] = (z,speed,dir)
+    shark = afterShark
 
-    if check[arr[start]] == 1:
-        del check[arr[start]]
-    else:
-        check[arr[start]] -= 1
-    start +=1
-    end +=1
-print(maxValue)
+print(count)
 
 ```
 
 # 사용 개념
 
--   자료구조
--   슬라이딩 윈도우
+-   구현
+-   시뮬레이션
 
 ---
 
 # 새겨놔야 할점
 
--   없음
+-   시간복잡도 계산

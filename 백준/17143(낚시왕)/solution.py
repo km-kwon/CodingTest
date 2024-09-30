@@ -26,6 +26,10 @@ for cur in range(C):
         curx = j
         cury = i 
         curZ, curSpeed, curDir = shark[(i,j)]
+        if curDir == 0 or curDir == 1:
+            curSpeed = curSpeed % (2*(R-1))
+        else:
+            curSpeed = curSpeed% (2*(C-1))
         for k in range(curSpeed):
             if curx + dx[curDir]<0 or curx + dx[curDir]>=C or cury + dy[curDir] < 0 or cury + dy[curDir]>=R:
                 if curDir == 0:
