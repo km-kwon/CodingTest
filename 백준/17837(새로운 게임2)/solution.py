@@ -20,6 +20,7 @@ for i in range(K):
 
 turn = 1
 while turn<=1000:
+    breakFlag = False
     for i in range(K):
         cury = loc[i][0]
         curx = loc[i][1]
@@ -64,15 +65,9 @@ while turn<=1000:
                     status[ny][nx].append(move[-j])
                     loc[move[-j]][0] = ny
                     loc[move[-j]][1] = nx
-    tempR = loc[0][0]
-    tempC = loc[0][1]
-    checkFlag = True  
-
-    for j in range(1,len(loc)):
-        if loc[j][0] != tempR or loc[j][1] != tempC:
-            checkFlag = False
-            break
-    if checkFlag:
+            if len(status[ny][nx])>=4:
+                breakFlag = True
+    if breakFlag:
         break
     turn += 1
 
