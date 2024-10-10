@@ -1,16 +1,16 @@
 from collections import deque
 import copy
 
-N,M,T = map(int,input().split())
+N, M, T = map(int, input().split())
 status = [deque() for _ in range(N+1)]
 
 for i in range(1, N+1):
-    temp = list(map(int,input().split()))
+    temp = list(map(int, input().split()))
     for j in temp:
         status[i].append(j)
 
 for i in range(T):
-    x,d,k = map(int,input().split())
+    x, d, k = map(int, input().split())
     # 돌려돌려 돌림판
     for j in range(1, N+1):
         # j가 x의 배수라면 움직여야하는 원판

@@ -1,65 +1,117 @@
-### 낚시왕
+### 원판 돌리기
 
 성공 코드
 
 ```
 from collections import deque
+import copy
 
-dx = [0, 0, 1, -1]
-dy = [-1, 1, 0 ,0]
+N, M, T = map(int, input().split())
+status = [deque() for _ in range(N+1)]
 
-count = 0
+for i in range(1, N+1):
+    temp = list(map(int, input().split()))
+    for j in temp:
+        status[i].append(j)
 
-R,C,m = map(int,input().split())
-shark = {}
+for i in range(T):
+    x, d, k = map(int, input().split())
+    # 돌려돌려 돌림판
+    for j in range(1, N+1):
+        # j가 x의 배수라면 움직여야하는 원판
+        if j % x ==0:
+            # k만큼 움직이기
+            if d == 0:
+                for move in range(k):
+                    temp = status[j].pop()
+                    status[j].appendleft(temp)
+            elif d == 1:
+                for move in range(k):
+                    temp = status[j].popleft()
+                    status[j].append(temp)
 
-for i in range(m):
-    r,c,s,d,z = map(int,input().split())
-    r = r-1
-    c = c-1
-    shark[(r,c)] = (z,s,d-1)
-    # z: 사이즈 s: 속력 d-1 : 방향
-
-for cur in range(C):
-    for j in range(R):
-        if (j,cur) in shark:
-            count += shark[(j,cur)][0]
-            del shark[(j,cur)]
-            break
-    temp = []
-    for i,j in shark.keys():
-        curx = j
-        cury = i
-        curZ, curSpeed, curDir = shark[(i,j)]
-        if curDir == 0 or curDir == 1:
-            curSpeed = curSpeed % (2*(R-1))
+    after = copy.deepcopy(status)
+    flag = True
+    # 전체 순회 및 체크
+    for j in range(1, N+1):
+        if sum(status[j]) == -M:
+            continue
         else:
-            curSpeed = curSpeed% (2*(C-1))
-        for k in range(curSpeed):
-            if curx + dx[curDir]<0 or curx + dx[curDir]>=C or cury + dy[curDir] < 0 or cury + dy[curDir]>=R:
-                if curDir == 0:
-                    curDir = 1
-                elif curDir == 1:
-                    curDir = 0
-                elif curDir == 2:
-                    curDir = 3
-                elif curDir == 3:
-                    curDir = 2
-            curx = curx + dx[curDir]
-            cury = cury + dy[curDir]
-        temp.append((cury,curx,curZ, curSpeed, curDir))
-    afterShark = {}
-    for y,x,z,speed,dir in temp:
-        if not (y,x) in afterShark:
-            afterShark[(y,x)] = (z,speed,dir)
-        else:
-            if afterShark[(y,x)][0] > z:
-                continue
-            else:
-                afterShark[(y,x)] = (z,speed,dir)
-    shark = afterShark
+            for num in range(M):
+                if status[j][num] == -1:
+                    continue
+                if j < N:
+                    if num == M-1:
+                        if status[j][num] == status[j][num-1]:
+                            after[j][num] = -1
+                            after[j][num-1] = -1
+                            flag = False
+                        if status[j][num] == status[j+1][num]:
+                            after[j][num] = -1
+                            after[j+1][num] = -1
+                            flag = False
+                        if status[j][num] == status[j][0]:
+                            after[j][num] = -1
+                            after[j][0] = -1
+                            flag = False
+                    else:
+                    # 마지막일떄
+                        if status[j][num] == status[j][num-1]:
+                            after[j][num] = -1
+                            after[j][num-1] = -1
+                            flag = False
+                        if status[j][num] == status[j][num+1]:
+                            after[j][num] = -1
+                            after[j][num+1] = -1
+                            flag = False
+                        if status[j][num] == status[j+1][num]:
+                            after[j][num] = -1
+                            after[j+1][num] = -1
+                            flag = False
+                else:
+                    if num == M-1:
+                        if status[j][num] == status[j][num-1]:
+                            after[j][num] = -1
+                            after[j][num-1] = -1
+                            flag = False
+                        if status[j][num] == status[j][0]:
+                            after[j][num] = -1
+                            after[j][0] = -1
+                            flag = False
+                    else:
+                    # 마지막일떄
+                        if status[j][num] == status[j][num-1]:
+                            after[j][num] = -1
+                            after[j][num-1] = -1
+                            flag = False
+                        if status[j][num] == status[j][num+1]:
+                            after[j][num] = -1
+                            after[j][num+1] = -1
+                            flag = False
+    if flag:
+        sumValue = 0
+        count = 0
+        for j in range(1, N+1):
+            for num in range(M):
+                if after[j][num] != -1:
+                    sumValue+= after[j][num]
+                    count+=1
+        for j in range(1, N+1):
+            for num in range(M):
+                if after[j][num] != -1:
+                    if after[j][num] > (sumValue/count):
+                        after[j][num]-=1
+                    elif after[j][num] < (sumValue/count):
+                        after[j][num]+=1
+    status = after
 
-print(count)
+sumValue = 0
+for j in range(1, N+1):
+    for num in range(M):
+        if after[j][num] != -1:
+            sumValue+= after[j][num]
+print(sumValue)
+
 
 ```
 
@@ -72,4 +124,4 @@ print(count)
 
 # 새겨놔야 할점
 
--   시간복잡도 계산
+-   오타 조심
