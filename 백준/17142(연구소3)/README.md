@@ -1,4 +1,4 @@
-### 원판 돌리기
+### 연구소 3
 
 성공 코드
 
@@ -6,122 +6,99 @@
 from collections import deque
 import copy
 
-N, M, T = map(int, input().split())
-status = [deque() for _ in range(N+1)]
+N,activeCount = map(int,input().split())
+arr = []
+for i in range(N):
+    arr.append(list(map(int,input().split())))
 
-for i in range(1, N+1):
-    temp = list(map(int, input().split()))
-    for j in temp:
-        status[i].append(j)
+minTime = 1e9
 
-for i in range(T):
-    x, d, k = map(int, input().split())
-    # 돌려돌려 돌림판
-    for j in range(1, N+1):
-        # j가 x의 배수라면 움직여야하는 원판
-        if j % x ==0:
-            # k만큼 움직이기
-            if d == 0:
-                for move in range(k):
-                    temp = status[j].pop()
-                    status[j].appendleft(temp)
-            elif d == 1:
-                for move in range(k):
-                    temp = status[j].popleft()
-                    status[j].append(temp)
+dx = [0,1,0,-1]
+dy = [-1,0,1,0]
+virus = []
+for i in range(N):
+    for j in range(N):
+        if arr[i][j] == 2:
+            virus.append([False,(i,j)])
 
-    after = copy.deepcopy(status)
-    flag = True
-    # 전체 순회 및 체크
-    for j in range(1, N+1):
-        if sum(status[j]) == -M:
-            continue
+def bfs(virus):
+    global arr, dx, dy, N, minTime
+    visited = [[False] * N for _ in range(N)]
+    queue = deque()
+    curTime = 0
+    for check,(i,j) in virus:
+        if check:
+            queue.append((i,j))
+            visited[i][j] = True
+    for i in range(N):
+        for  j in range(N):
+            if arr[i][j] == 1:
+                visited[i][j] = True
+    while queue:
+        afterQueue = deque()
+        for cy,cx in queue:
+            visited[cy][cx] = True
+            for i in range(4):
+                ny = cy+dy[i]
+                nx = cx+dx[i]
+                if ny >= 0 and ny < N and nx >=0 and nx < N:
+                    if visited[ny][nx] == False:
+                        if arr[ny][nx] == 0 or arr[ny][nx] == 2:
+                            if not (ny,nx) in afterQueue:
+                                afterQueue.append((ny,nx))
+        temp = copy.deepcopy(visited)
+        for check,(i,j) in virus:
+            temp[i][j] = True
+        flag = False
+        if not afterQueue:
+            for i in range(N):
+                for j in range(N):
+                    if temp[i][j] == False:
+                        return
         else:
-            for num in range(M):
-                if status[j][num] == -1:
-                    continue
-                if j < N:
-                    if num == M-1:
-                        if status[j][num] == status[j][num-1]:
-                            after[j][num] = -1
-                            after[j][num-1] = -1
-                            flag = False
-                        if status[j][num] == status[j+1][num]:
-                            after[j][num] = -1
-                            after[j+1][num] = -1
-                            flag = False
-                        if status[j][num] == status[j][0]:
-                            after[j][num] = -1
-                            after[j][0] = -1
-                            flag = False
-                    else:
-                    # 마지막일떄
-                        if status[j][num] == status[j][num-1]:
-                            after[j][num] = -1
-                            after[j][num-1] = -1
-                            flag = False
-                        if status[j][num] == status[j][num+1]:
-                            after[j][num] = -1
-                            after[j][num+1] = -1
-                            flag = False
-                        if status[j][num] == status[j+1][num]:
-                            after[j][num] = -1
-                            after[j+1][num] = -1
-                            flag = False
-                else:
-                    if num == M-1:
-                        if status[j][num] == status[j][num-1]:
-                            after[j][num] = -1
-                            after[j][num-1] = -1
-                            flag = False
-                        if status[j][num] == status[j][0]:
-                            after[j][num] = -1
-                            after[j][0] = -1
-                            flag = False
-                    else:
-                    # 마지막일떄
-                        if status[j][num] == status[j][num-1]:
-                            after[j][num] = -1
-                            after[j][num-1] = -1
-                            flag = False
-                        if status[j][num] == status[j][num+1]:
-                            after[j][num] = -1
-                            after[j][num+1] = -1
-                            flag = False
-    if flag:
-        sumValue = 0
-        count = 0
-        for j in range(1, N+1):
-            for num in range(M):
-                if after[j][num] != -1:
-                    sumValue+= after[j][num]
-                    count+=1
-        for j in range(1, N+1):
-            for num in range(M):
-                if after[j][num] != -1:
-                    if after[j][num] > (sumValue/count):
-                        after[j][num]-=1
-                    elif after[j][num] < (sumValue/count):
-                        after[j][num]+=1
-    status = after
+            for i in range(N):
+                if flag:
+                    break
+                for j in range(N):
+                    if temp[i][j] == False:
+                        flag = True
+                        break
+        if flag:
+            curTime +=1
+            if curTime > minTime:
+                return
+            queue = afterQueue
+        else:
+            break
+    minTime = min(curTime,minTime)
+    return
 
-sumValue = 0
-for j in range(1, N+1):
-    for num in range(M):
-        if after[j][num] != -1:
-            sumValue+= after[j][num]
-print(sumValue)
+def active(start, virus, curVirusCount):
+    global activeCount
+    if curVirusCount < activeCount:
+        for i in range(start,len(virus)):
+            virus[i][0] = True
+            active(i+1, virus, curVirusCount+1)
+            virus[i][0] = False
+    elif curVirusCount == activeCount:
+        bfs(virus)
+    return
+
+active(0,virus,0)
+
+if minTime == 1e9:
+    print(-1)
+else:
+    print(minTime)
 
 
 ```
 
 # 사용 개념
 
--   구현
--   시뮬레이션
+-   그래프 이론
+-   브루트포스 알고리즘
+-   그래프 탐색
+-   너비 우선 탐색
 
 ---
-
-# 새겨놔야 할점
-
--   오타 조심
