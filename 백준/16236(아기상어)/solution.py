@@ -24,7 +24,6 @@ def findEat(starty, startx, arr, size):
     canEat = []
     while queue:
         cury, curx, distance = queue.popleft()
-        visit[cury][curx] = True
         if arr[cury][curx] < size and arr[cury][curx] > 0 and not (cury,curx,distance) in canEat:
             canEat.append((cury,curx, distance)) 
         for i in range(4):
@@ -33,6 +32,7 @@ def findEat(starty, startx, arr, size):
             if ny >= 0 and ny < N and nx >= 0 and nx < N:
                 if arr[ny][nx] <= size and visit[ny][nx] == False and not (ny,nx) in queue:
                     queue.append((ny,nx, distance + 1))
+                    visit[ny][nx] = True
     return canEat
 
 time = 0
