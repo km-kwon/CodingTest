@@ -27,6 +27,7 @@ def findEat(starty, startx, arr, size):
         if arr[cury][curx] < size and arr[cury][curx] > 0 and not (cury,curx,distance) in canEat:
             canEat.append((cury,curx, distance)) 
         for i in range(4):
+            
             ny = cury + dy[i]
             nx = curx + dx[i]
             if ny >= 0 and ny < N and nx >= 0 and nx < N:
