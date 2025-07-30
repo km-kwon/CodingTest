@@ -11,6 +11,12 @@
 순차적으로 하면 될듯?
 map을 이용해서 2차원 배열 삽입
 ```
+
+- [마법의 숲 탐색](https://github.com/km-kwon/CodingTest/blob/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AC%B8%EC%A0%9C/DFS%2CBFS/%EB%A7%88%EB%B2%95%EC%9D%98%20%EC%88%B2%20%ED%83%90%EC%83%89/README.md)
+```
+시뮬레이션
+삼성 기출문제
+```
 ---
 ## 해쉬
 
