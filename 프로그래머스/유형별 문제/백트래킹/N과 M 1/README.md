@@ -4,7 +4,8 @@
 
 성공 코드
 
-``from collections import deque
+```
+from collections import deque
 global iseUsed
 N, M = map(int,input().split())
 isUsed = [False] \* N
