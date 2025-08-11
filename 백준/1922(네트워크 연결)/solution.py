@@ -5,6 +5,7 @@ par = [0] * n
 for i in range(n):
     par[i] = i
 
+
 cost = []
 for i in range(m):
     n1, n2, c = map(int, input().split())
